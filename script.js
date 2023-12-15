@@ -31,3 +31,19 @@ function removeTraveller(type) {
         updateTravellerDetails();
     }
 }
+
+function updateTravellerDetails() {
+    const travellerDetailsContainer = document.getElementById("travellerDetails");
+    travellerDetailsContainer.innerHTML = "";
+
+    for (const type in travellersData) {
+        travellerDetailsContainer.innerHTML += `
+            <p>${type}: 
+                <button onclick="removeTraveller('${type}')">(-)</button>
+                ${travellersData[type]}
+                <button onclick="addTraveller('${type}')">( +)</button>
+            </p>`;
+    }
+    
+    updateTotalTravellers();  // Update total dynamically
+}
