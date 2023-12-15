@@ -7,7 +7,10 @@ let travellersData = {
     'Adults': 0,
     'Students': 0,
     'Youths': 0,
-    'Children': 0
+    'Children': 0,
+    'Toddlers in own seat':0,
+    'infants on lap':0
+
 };
 
 function openTravellerModal() {
