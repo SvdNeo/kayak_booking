@@ -47,3 +47,15 @@ function updateTravellerDetails() {
     
     updateTotalTravellers();  // Update total dynamically
 }
+
+function updateTotalTravellers() {
+    let totalTravellers = 0 ;
+    for (const type in travellersData) {
+        totalTravellers += travellersData[type];
+    }
+    document.getElementById("travellers").value = `${totalTravellers} travellers`;
+}
+
+// Adding event listener to the "Number of Travellers" input
+document.getElementById("travellers").addEventListener("focus", openTravellerModal);
+
