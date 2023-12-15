@@ -14,3 +14,8 @@ function openTravellerModal() {
     updateTravellerDetails();
     document.getElementById("travellerModal").style.display = "block";
 }
+
+function closeTravellerModal() {
+    updateTotalTravellers();  // Update total when closing the modal
+    document.getElementById("travellerModal").style.display = "none";
+}
