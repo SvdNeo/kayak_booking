@@ -9,3 +9,8 @@ let travellersData = {
     'Youths': 0,
     'Children': 0
 };
+
+function openTravellerModal() {
+    updateTravellerDetails();
+    document.getElementById("travellerModal").style.display = "block";
+}
