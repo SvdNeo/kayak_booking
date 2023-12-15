@@ -19,3 +19,15 @@ function closeTravellerModal() {
     updateTotalTravellers();  // Update total when closing the modal
     document.getElementById("travellerModal").style.display = "none";
 }
+
+function addTraveller(type) {
+    travellersData[type]++;
+    updateTravellerDetails();
+}
+
+function removeTraveller(type) {
+    if (travellersData[type] > 0) {
+        travellersData[type]--;
+        updateTravellerDetails();
+    }
+}
